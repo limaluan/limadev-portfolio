@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
+interface ILoadingScreenProps {
+    closeLoading: boolean;
+}
+
+export const Container = styled.section<ILoadingScreenProps>`
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -13,8 +17,9 @@ export const Container = styled.section`
 
     background-color: var(--background-black);
 
-    animation-name: closingLoader;
-    animation-duration: 6s;
+    animation-name: ${(closeLoading) => closeLoading ? 'closingLoader' : ''};
+    /* animation-name: closingLoader; */
+    animation-duration: 4s;
     animation-fill-mode: forwards;
     
     h1 {

@@ -1,25 +1,19 @@
-import { useEffect, useState } from "react";
-import { About } from "./components/About";
-
-import Home from "./components/Home";
-import LoadingScreen from "./components/LoadingScreen";
 import { GlobalStyle } from "./styles/global";
 
+import { useLoading } from "./hooks/useLoading";
+
+import { About } from "./components/About";
+import Home from "./components/Home";
+import LoadingScreen from "./components/LoadingScreen";
+
 function App() {
-
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 6000)
-  }, [])
+  const { isLoaded } = useLoading();
 
   return (
     <>
-      {loading
-        ? <LoadingScreen />
-        : <></>
+      {isLoaded
+        ? <></>
+        : <LoadingScreen />
       }
       <Home />
       <About />

@@ -4,9 +4,17 @@ import meImg from "../../assets/img/meImg.png";
 import scrollImg from "../../assets/img/scroll_icon.png";
 import limaDevLogoImg from "../../assets/img/limaDev_logo.svg";
 import fullstackDeveloperImg from "../../assets/img/fullstackDeveloper.svg";
+import { useLoading } from "../../hooks/useLoading";
 
 
 export default function Home() {
+    const { handleCloseLoading, pageLoads } = useLoading();
+
+    window.onload = () => {
+        handleCloseLoading();
+        setTimeout(() => pageLoads(), 3000);
+    }
+
     return (
         <Container>
             <header>

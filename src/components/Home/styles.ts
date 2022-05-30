@@ -43,7 +43,7 @@ export const Container = styled.section`
     };
 
     > img {
-        position: absolute;
+        position: fixed;
         right: 50%;
         bottom: 1rem;
         width: 5rem;
