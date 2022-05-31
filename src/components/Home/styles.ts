@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
+interface StylesProps {
+    isLoaded: boolean;
+}
 
-export const Container = styled.section`
+export const Container = styled.section<StylesProps>`
     background-color: var(--background-white);
     height: 100vh;
     width: 100%;
@@ -20,14 +23,15 @@ export const Container = styled.section`
         display: flex;
         justify-content: space-between;
 
-        animation-name: headerToBottom;
-        animation-duration: 4500ms;
-        animation-fill-mode: backwards;
+        transform: translateY(-120%);
+        
+        animation-name: ${props => props.isLoaded ? 'headerToBottom' : ''};
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
 
         @keyframes headerToBottom {
-            0% {transform: translateY(-120%)}
-            40% {transform: translateY(-120%)}
-            100% {transform: translateY(0%)}
+            from {transform: translateY(-120%)}
+            to {transform: translateY(0%)}
         }
     };
 
@@ -91,11 +95,7 @@ export const LogoContent = styled.div`
     }
 `;
 
-interface HomeStylesProps {
-    isLoaded: boolean;
-}
-
-export const AboutMeSection = styled.main<HomeStylesProps>`
+export const AboutMeSection = styled.main<StylesProps>`
     grid-area: 'content';
     width: 90%;
     height: 100%;
@@ -111,7 +111,6 @@ export const AboutMeSection = styled.main<HomeStylesProps>`
         justify-content: center;
         
         height: 100%;
-        /* background-color: blue; */
 
         h1 {
             margin-top: -5rem;
@@ -120,8 +119,8 @@ export const AboutMeSection = styled.main<HomeStylesProps>`
             font-weight: 500;
             opacity: 0;
 
-            animation-name: ${(isLoaded) => isLoaded ? 'opacity' : ''};
-            animation-duration: 4500ms;
+            animation-name: ${props => props.isLoaded ? 'opacity' : ''};
+            animation-duration: 1500ms;
             animation-fill-mode: forwards;
         }
 
@@ -130,15 +129,14 @@ export const AboutMeSection = styled.main<HomeStylesProps>`
             font-weight: 300;
             opacity: 0;
 
-            animation-name: ${(isLoaded) => isLoaded ? 'opacity' : ''};
+            animation-name: ${props => props.isLoaded ? 'opacity' : ''};
             animation-duration: 5500ms;
             animation-fill-mode: forwards;
         }
 
         @keyframes opacity {
-            0% {opacity: 0}
-            50% {opacity: 0}
-            100% {opacity: 1}
+            from {opacity: 0}
+            to {opacity: 1}
         }
     }
     
@@ -147,7 +145,7 @@ export const AboutMeSection = styled.main<HomeStylesProps>`
         transition: all 200ms;
         transform: translateY(100%);
 
-        animation-name: ${(isLoaded) => isLoaded ? 'introImage' : ''};
+        animation-name: ${props => props.isLoaded ? 'introImage' : ''};
         animation-duration: 4s;
         animation-fill-mode: forwards;
     }
@@ -161,13 +159,11 @@ export const AboutMeSection = styled.main<HomeStylesProps>`
     img:hover {
         -webkit-filter: grayscale(0);
         cursor: pointer;
+        transition: all 200ms;
     }
     
     @keyframes introImage {
-        0% {transform: translateY(100%)}
-        40% {transform: translateY(100%)}
-        100% {transform: translateY(0%)}
+        from {transform: translateY(100%)}
+        to {transform: translateY(0%)}
     }
-    
-    /* background-color: aquamarine; */
 `;

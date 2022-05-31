@@ -16,7 +16,7 @@ export default function Home() {
     }
 
     return (
-        <Container>
+        <Container isLoaded={isLoaded}>
             <header>
                 <LogoContent>
                     <img src={fullstackDeveloperImg} alt="Logo LimaDev" />

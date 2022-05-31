@@ -17,8 +17,7 @@ export const Container = styled.section<ILoadingScreenProps>`
 
     background-color: var(--background-black);
 
-    animation-name: ${(closeLoading) => closeLoading ? 'closingLoader' : ''};
-    /* animation-name: closingLoader; */
+    animation-name: ${props => props.closeLoading ? 'closingLoader' : ''};
     animation-duration: 4s;
     animation-fill-mode: forwards;
     
@@ -38,21 +37,20 @@ export const Container = styled.section<ILoadingScreenProps>`
     }
     
     div > div {
-        background-color: white;
-        width: 0%;
-        height: 1rem;
+        border: 1rem solid gray;
+        border-top: 1rem solid cyan;
+        width: 10rem;
+        height: 10rem;
 
         margin-top: 2rem;
-        border-radius: 3rem;
+        border-radius: 5rem;
 
-        animation-name: loadingBar;
-        animation-duration: 5s;
-        animation-fill-mode: forwards;
+        animation: loadingCircle 2s infinite linear;
     }
     
-    @keyframes loadingBar {
-        from {width: 0}
-        to {width: 100%}
+    @keyframes loadingCircle {
+        from {transform: rotate(0deg)}
+        to {transform: rotate(360deg)}
     }
 
     @keyframes closingLoader {
