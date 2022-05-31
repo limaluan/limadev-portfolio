@@ -8,7 +8,7 @@ import { useLoading } from "../../hooks/useLoading";
 
 
 export default function Home() {
-    const { handleCloseLoading, pageLoads } = useLoading();
+    const { handleCloseLoading, pageLoads, isLoaded } = useLoading();
 
     window.onload = () => {
         handleCloseLoading();
@@ -29,13 +29,13 @@ export default function Home() {
                     <li><a href="#">Contato</a></li>
                 </ul>
             </header>
-            <AboutMeSection>
+            <AboutMeSection isLoaded={isLoaded}>
                 <section>
                     <h1>Desenvolvedor Fullstack</h1>
                     <p>Oi, meu nome é <b>Luan Lima</b>, tenho 20 anos e sou um Web Developer focado nas melhores tecnologias do mercado</p>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique nisi dolore voluptatem recusandae debitis esse minima? Aut, voluptatibus saepe.</p>
                 </section>
-                <img src={meImg} alt="Foto do Luan" />
+                <a href="#about"><img src={meImg} alt="Foto do Luan" /></a>
             </AboutMeSection>
             <img src={scrollImg} alt="Ícone de Scroll" />
         </Container>

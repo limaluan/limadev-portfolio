@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const Container = styled.section`
     background-color: var(--background-white);
     height: 100vh;
@@ -18,6 +19,16 @@ export const Container = styled.section`
 
         display: flex;
         justify-content: space-between;
+
+        animation-name: headerToBottom;
+        animation-duration: 4500ms;
+        animation-fill-mode: backwards;
+
+        @keyframes headerToBottom {
+            0% {transform: translateY(-120%)}
+            40% {transform: translateY(-120%)}
+            100% {transform: translateY(0%)}
+        }
     };
 
     ul {
@@ -80,7 +91,11 @@ export const LogoContent = styled.div`
     }
 `;
 
-export const AboutMeSection = styled.main`
+interface HomeStylesProps {
+    isLoaded: boolean;
+}
+
+export const AboutMeSection = styled.main<HomeStylesProps>`
     grid-area: 'content';
     width: 90%;
     height: 100%;
@@ -103,25 +118,55 @@ export const AboutMeSection = styled.main`
             margin-bottom: 1rem;
             font-size: 9rem;
             font-weight: 500;
+            opacity: 0;
+
+            animation-name: ${(isLoaded) => isLoaded ? 'opacity' : ''};
+            animation-duration: 4500ms;
+            animation-fill-mode: forwards;
         }
 
         p {
             font-size: 1.5rem;
             font-weight: 300;
+            opacity: 0;
+
+            animation-name: ${(isLoaded) => isLoaded ? 'opacity' : ''};
+            animation-duration: 5500ms;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes opacity {
+            0% {opacity: 0}
+            50% {opacity: 0}
+            100% {opacity: 1}
         }
     }
     
-    img {
+    a {
         height: 90%;
+        transition: all 200ms;
+        transform: translateY(100%);
+
+        animation-name: ${(isLoaded) => isLoaded ? 'introImage' : ''};
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+    }
+    
+    a img {
+        height: 100%;
         -webkit-filter: grayscale(100%);
         transition: all 200ms;
-        /* background-color: green; */
     }
 
     img:hover {
         -webkit-filter: grayscale(0);
         cursor: pointer;
-        transition: all 200ms;
+    }
+    
+    @keyframes introImage {
+        0% {transform: translateY(100%)}
+        40% {transform: translateY(100%)}
+        100% {transform: translateY(0%)}
     }
     
     /* background-color: aquamarine; */
