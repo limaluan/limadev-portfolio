@@ -1,14 +1,20 @@
-import { AboutMeSection, Container, LogoContent } from "./styles";
+import styles from "./home.module.scss";
+
+import { useEffect, useState } from "react";
+import { useLoading } from "../../hooks/useLoading";
 
 import meImg from "../../assets/img/meImg.png";
 import scrollImg from "../../assets/img/scroll_icon.png";
-import limaDevLogoImg from "../../assets/img/limaDev_logo.svg";
-import fullstackDeveloperImg from "../../assets/img/fullstackDeveloper.svg";
-import { useLoading } from "../../hooks/useLoading";
-
 
 export default function Home() {
     const { handleCloseLoading, pageLoads, isLoaded } = useLoading();
+    const [description, setDescription] = useState('');
+
+    useEffect(() => {
+        fetch(`https://api.github.com/users/limaluan`).then(response => response.json().then(data => {
+            setDescription(data.bio)
+        }))
+    }, []);
 
     window.onload = () => {
         handleCloseLoading();
@@ -16,28 +22,15 @@ export default function Home() {
     }
 
     return (
-        <Container isLoaded={isLoaded}>
-            <header>
-                <LogoContent>
-                    <img src={fullstackDeveloperImg} alt="Logo LimaDev" />
-                    <img src={limaDevLogoImg} alt="Logo LimaDev" />
-                </LogoContent>
-                <ul>
-                    <li><a href="#">Ínicio</a></li>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#">Projetos</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </header>
-            <AboutMeSection isLoaded={isLoaded}>
-                <section>
-                    <h1>Desenvolvedor Fullstack</h1>
-                    <p>Oi, meu nome é <b>Luan Lima</b>, tenho 20 anos e sou um Web Developer focado nas melhores tecnologias do mercado</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique nisi dolore voluptatem recusandae debitis esse minima? Aut, voluptatibus saepe.</p>
-                </section>
-                <a href="#about"><img src={meImg} alt="Foto do Luan" /></a>
-            </AboutMeSection>
-            <img src={scrollImg} alt="Ícone de Scroll" />
-        </Container>
+        <section className={styles.container}>
+            <div className={styles.content}>
+                <div className={styles.description}>
+                    <h1>Desenvolvedor Front-End</h1>
+                    <p>{description} Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quia corrupti unde sit architecto facilis beatae facere ducimus esse l</p>
+                </div>
+                <img className={styles.meImg} src={meImg} alt="Foto do Desenvolvedor" />
+            </div>
+            <img className={styles.scrollImg} src={scrollImg} alt="Ícone demonstrando scroll" />
+        </section>
     );
 }

@@ -1,0 +1,47 @@
+.container {
+    background-color: var(--background-white);
+    // width: 100vw;
+    height: calc(100vh - 6rem);
+    z-index: 0;
+}
+
+.content{
+    z-index: 2;
+    max-width: 1400px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    .meImg {
+        height: 80%;
+        align-self: flex-end;
+        filter: grayscale(100%);
+        transition: filter 0.2s;
+
+        &:hover {
+            filter: grayscale(0%);
+            cursor: pointer;
+        }
+    }
+}
+
+.description {
+    align-self: center;
+    width: 60%;
+
+    h1 {
+        font-size: 6.4rem;
+    }
+
+    p {
+        font-size: 1.6rem;
+    }
+}
+
+.scrollImg {
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    width: 6rem;
+}

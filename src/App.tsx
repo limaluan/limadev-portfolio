@@ -1,11 +1,10 @@
-import { GlobalStyle } from "./styles/global";
-
 import { useLoading } from "./hooks/useLoading";
 
 import { About } from "./components/About";
 import Home from "./components/Home";
-import LoadingScreen from "./components/LoadingScreen";
 import { useEffect } from "react";
+import './styles/global.scss';
+import { Header } from "./components/Header";
 
 function App() {
   const { isLoaded } = useLoading();
@@ -20,13 +19,9 @@ function App() {
   
   return (
     <>
-      {isLoaded
-        ? <></>
-        : <LoadingScreen />
-      }
+      <Header />
       <Home />
       <About />
-      <GlobalStyle />
     </>
   );
 }
