@@ -7,7 +7,7 @@ export function Header() {
             <div className={styles.content}>
                 <img className={styles.logoImg} src={logoImg} />
                 <ul className={styles.menu}>
-                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#about">Sobre</a></li>
                     <li><a href="#">Projetos</a></li>
                     <li><a href="#">Contato</a></li>
                 </ul>

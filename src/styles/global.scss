@@ -4,7 +4,9 @@
     --background-black: #282C34;
     --gray-light: rgba(120, 120, 120);
     --gray-dark: rgba(60, 60, 60);
-};
+}
+
+;
 
 * {
     margin: 0;
@@ -16,30 +18,56 @@
     list-style: none;
 
     text-decoration: none;
-};
+}
+
+;
 
 a {
     color: inherit;
-};
+}
+
+;
 
 html {
     width: 100%;
     height: 100%;
     font-size: 62.5%;
     scroll-behavior: smooth;
-};
+}
+
+;
 
 body {
-    width: 100%;
-    height: 100%;
-};
+    width: 100vw;
+    height: 100vh;
+}
+
+;
 
 html::-webkit-scrollbar {
     display: none;
-};
+}
+
+;
 
 h1,
 h2 {
     font-family: 'Fira Sans', sans-serif;
     font-weight: 700;
-};
+}
+
+;
+
+.scrollImg {
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    width: 6rem;
+}
+
+@media (max-width: 425px) {
+    .scrollImg {
+        // transform: translateX(50%);
+        display: none;
+    }
+}

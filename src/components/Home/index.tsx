@@ -22,15 +22,24 @@ export default function Home() {
     }
 
     return (
-        <section className={styles.container}>
+        <section id='about' className={styles.container}>
             <div className={styles.content}>
                 <div className={styles.description}>
                     <h1>Desenvolvedor Front-End</h1>
-                    <p>{description} Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quia corrupti unde sit architecto facilis beatae facere ducimus esse l</p>
+                    <p>{description} Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quia corrupti unde sit architecto facilis beatae facere ducimus esse l</p>
+                    <div className={styles.stacksImg}>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
+                        {/* <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg" /> */}
+                    </div>
                 </div>
                 <img className={styles.meImg} src={meImg} alt="Foto do Desenvolvedor" />
+                <span className={styles.gradient}></span>
             </div>
-            <img className={styles.scrollImg} src={scrollImg} alt="Ícone demonstrando scroll" />
+            <img className='scrollImg' src={scrollImg} alt="Ícone demonstrando scroll" />
         </section>
     );
 }

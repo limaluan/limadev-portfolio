@@ -30,3 +30,17 @@
         }
     }
 }
+
+@media (max-width: 425px) {
+    .container {
+    }
+    
+    .content {
+        justify-content: center;
+    }
+    
+    .menu {
+        visibility: hidden;
+        position: absolute;
+    }
+}
