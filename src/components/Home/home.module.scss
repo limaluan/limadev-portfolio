@@ -1,111 +1,177 @@
 .container {
-    background-color: var(--background-white);
-    // width: 100vw;
-    height: calc(100vh - 6rem);
-    z-index: 0;
+  background-color: var(--background-white);
+  // width: 100vw;
+  height: calc(100vh - 6rem);
+  z-index: 0;
 }
 
 .content {
-    z-index: 2;
-    text-align: center;
-    max-width: 1400px;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
+  z-index: 2;
+  text-align: center;
+  max-width: 1400px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
 
-    .meImg {
-        height: 80%;
-        align-self: flex-end;
-        filter: grayscale(100%);
-        transition: filter 0.2s;
+  .meImg {
+    height: 80%;
+    align-self: flex-end;
+    filter: grayscale(100%);
+    transition: filter 0.2s;
 
-        &:hover {
-            filter: grayscale(0%);
-            cursor: pointer;
-        }
+    &:hover {
+      filter: grayscale(0%);
+      cursor: pointer;
     }
+
+    animation-name: intro-bottom-to-top;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+  }
 }
 
 .description {
-    align-self: center;
-    width: 60%;
+  align-self: center;
+  width: 60%;
 
-    h1 {
-        font-size: 6.4rem;
+  h1 {
+    font-size: 6.4rem;
+    opacity: 0;
+
+    animation-name: opacity;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+  }
+
+  p {
+    font-size: 1.6rem;
+    opacity: 0;
+
+    animation-name: opacity;
+    animation-fill-mode: forwards;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+  }
+
+  .stacksImg {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+
+    img {
+      width: 10%;
+      animation-name: opacity;
+      animation-fill-mode: forwards;
+      animation-duration: 1000ms;
+      animation-timing-function: ease;
     }
 
-    p {
-        font-size: 1.6rem;
+    img:nth-child(1) {
+      opacity: 0;
+      animation-delay: 1s;
     }
 
-    .stacksImg {
-        display: flex;
-        width: 80%;
-        margin: 0 auto;
-        justify-content: center;
-        gap: 3rem;
-        margin-top: 2rem;
-
-        img {
-            width: 10%;
-        }
+    img:nth-child(2) {
+      opacity: 0;
+      animation-delay: 1.5s;
     }
+
+    img:nth-child(3) {
+      opacity: 0;
+      animation-delay: 2s;
+    }
+
+    img:nth-child(4) {
+      opacity: 0;
+      animation-delay: 2.5s;
+    }
+
+    img:nth-child(5) {
+      opacity: 0;
+      animation-delay: 3s;
+    }
+  }
+}
+
+@keyframes intro-bottom-to-top {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translate(0%);
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 425px) {
-    .container {
-        width: 100vw;
+  .container {
+    width: 100vw;
+  }
+
+  .content {
+    flex-direction: column;
+    // gap: 5rem;
+    // background-color: aqua;
+
+    .meImg {
+      // display: none;
+      // position: absolute;
+      // top: 0;
+      height: 50%;
+      align-self: center;
+      justify-self: flex-end;
     }
 
-    .content {
-        flex-direction: column;
-        // gap: 5rem;
-        // background-color: aqua;
+    .gradient {
+      width: 100%;
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0) 5%,
+        rgba(50, 50, 50, 0.5) 95%
+      );
+      height: 8vh;
+      position: absolute;
+      bottom: 0;
+    }
+  }
 
-        .meImg {
-            // display: none;
-            // position: absolute;
-            // top: 0;
-            height: 50%;
-            align-self: center;
-            justify-self: flex-end;
-        }
+  .description {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    height: 100%;
+    width: fit-content;
+    // background-color: antiquewhite;
 
-        .gradient {
-            width: 100%;
-            background-image: linear-gradient(rgba(0, 0, 0, 0) 5%, rgba(50, 50, 50, 0.5) 95%);
-            height: 8vh;
-            position: absolute;
-            bottom: 0;
-        }
+    h1 {
+      font-size: 4.1rem;
     }
 
-    .description {
-        display: flex;
-        align-self: center;
-        flex-direction: column;
-        justify-content: center;
-        gap: 2rem;
-        height: 100%;
-        width: fit-content;
-        // background-color: antiquewhite;
-
-        h1 {
-            font-size: 4.1rem;
-        }
-
-        p {
-            font-size: 1.4rem;
-            padding: 0 2rem;
-        }
-
-        .stacksImg {
-            margin-top: 0;
-
-            img {
-                width: 15%;
-            }
-        }
+    p {
+      font-size: 1.4rem;
+      padding: 0 2rem;
     }
+
+    .stacksImg {
+      margin-top: 0;
+
+      img {
+        width: 15%;
+      }
+    }
+  }
 }

@@ -3,7 +3,7 @@ import { useLoading } from "./hooks/useLoading";
 import { About } from "./components/About";
 import Home from "./components/Home";
 import { useEffect } from "react";
-import './styles/global.scss';
+import "./styles/global.scss";
 import { Header } from "./components/Header";
 
 function App() {
@@ -11,12 +11,12 @@ function App() {
 
   useEffect(() => {
     if (!isLoaded) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'initial';
+      document.body.style.overflow = "initial";
     }
-  }, [isLoaded])
-  
+  }, [isLoaded]);
+
   return (
     <>
       <Header />
@@ -27,3 +27,4 @@ function App() {
 }
 
 export default App;
+
