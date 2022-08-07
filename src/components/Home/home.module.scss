@@ -1,6 +1,6 @@
 .container {
   background-color: var(--background-white);
-  // width: 100vw;
+  overflow-y: hidden;
   height: calc(100vh - 6rem);
   z-index: 0;
 

@@ -33,7 +33,9 @@
     width: 100%;
     gap: 3%;
     display: flex;
+    position: relative;
 
+    // Project Image
     & > img {
       width: 50%;
       border: var(--background-white) 0.5rem solid;
@@ -55,5 +57,52 @@
         font-size: 1.5rem;
       }
     }
+  }
+
+  .dotContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    gap: 2rem;
+    // background-color: aqua;
+    
+    
+    div {
+      content: "";
+      border: solid var(--background-white) 0.5rem;
+      filter: brightness(0.7);
+      border-radius: 100%;
+      cursor: pointer;
+    }
+    
+    :nth-child(1) {
+      filter: brightness(1);
+    }
+  }
+  
+  .arrow {
+    position: absolute;
+    height: 5rem;
+    filter: invert(88%) sepia(3%) saturate(2476%) hue-rotate(194deg)
+      brightness(110%) contrast(102%);
+    top: 50%;
+    transform: translateY(50%);
+    cursor: pointer;
+  }
+
+  //  Arrow Left
+  :nth-child(4) {
+    left: 0;
+  }
+
+  //  Arrow Rigth
+  :nth-child(5) {
+    right: 0;
+    transform: scaleX(-100%);
   }
 }
