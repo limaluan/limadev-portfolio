@@ -2,38 +2,64 @@
   height: 100vh;
   background-color: var(--background-black);
   position: relative;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   color: var(--background-white);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
 
-  // Scroll Icon
-  & > img {
+  .arrow {
+    position: absolute;
+    height: 5rem;
     filter: invert(88%) sepia(3%) saturate(2476%) hue-rotate(194deg)
       brightness(110%) contrast(102%);
+    top: 50%;
+    transform: translateY(50%);
+    cursor: pointer;
+    left: 1rem;
+    z-index: 1000;
   }
+
+  //  Arrow Rigth
+  .arrowRigth {
+    right: 0;
+    left: auto;
+    transform: scaleX(-100%);
+  }
+
+  // Scroll Icon
+  // & > img {
+  //   filter: invert(88%) sepia(3%) saturate(2476%) hue-rotate(194deg)
+  //     brightness(110%) contrast(102%);
+  // }
 
   .title {
     font-size: 4.1rem;
     text-align: center;
-    // padding-top: 3.5rem;
+    padding-top: 3.5rem;
   }
 }
 
-.content {
-  max-width: 1400px;
+.contentWrapper {
+  width: fit-content;
   margin: auto;
+  overflow-x: hidden;
+}
+
+.content {
   display: flex;
-  flex-direction: column;
+  flex-flow: row nowrap;
   align-items: center;
-  width: 100%;
+  transition: all 1000ms;
 
   .projectContainer {
     padding: 5rem;
     width: 100%;
+    flex-shrink: 0;
     gap: 3%;
     display: flex;
     position: relative;
+    padding: 0 10rem;
+    transition: all 1s;
 
     // Project Image
     & > img {
@@ -64,14 +90,10 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    
-    bottom: 1rem;
-    left: 0;
-    right: 0;
+
+    bottom: 2rem;
     gap: 2rem;
-    // background-color: aqua;
-    
-    
+
     div {
       content: "";
       border: solid var(--background-white) 0.5rem;
@@ -79,30 +101,9 @@
       border-radius: 100%;
       cursor: pointer;
     }
-    
-    :nth-child(1) {
+
+    .selected {
       filter: brightness(1);
     }
-  }
-  
-  .arrow {
-    position: absolute;
-    height: 5rem;
-    filter: invert(88%) sepia(3%) saturate(2476%) hue-rotate(194deg)
-      brightness(110%) contrast(102%);
-    top: 50%;
-    transform: translateY(50%);
-    cursor: pointer;
-  }
-
-  //  Arrow Left
-  :nth-child(4) {
-    left: 0;
-  }
-
-  //  Arrow Rigth
-  :nth-child(5) {
-    right: 0;
-    transform: scaleX(-100%);
   }
 }
