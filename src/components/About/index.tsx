@@ -1,8 +1,7 @@
 import styles from "./about.module.scss";
-import scrollImg from "../../assets/img/scroll_icon.png";
+// import scrollImg from "../../assets/img/scroll_icon.png";
 
 export function About() {
-  const content = document.getElementById("content");
   const controls = document.querySelectorAll("." + styles.arrow);
   const projects = document.querySelectorAll("." + styles.projectContainer);
   const maxProjects = projects.length;
@@ -61,7 +60,7 @@ export function About() {
       </svg>
       <h1 className={styles.title}>Projetos</h1>
 
-      <div id="content" className={styles.contentWrapper}>
+      <div className={styles.contentWrapper}>
         <div className={styles.content}>
           <article className={styles.projectContainer + " current-item "}>
             <img
@@ -82,12 +81,12 @@ export function About() {
 
           <article className={styles.projectContainer}>
             <img
-              src="https://camo.githubusercontent.com/01b10df792c4551ad549c1c851cd156ef747dc02aafb826c127849c4fb022c91/68747470733a2f2f696d6775722e636f6d2f6363535a6775382e676966"
+              src="https://camo.githubusercontent.com/146045a9a003e9cfd71a9109df7111019a19d991dc6b39fc2ab235aa43356e7c/68747470733a2f2f692e696d6775722e636f6d2f6776736846576c2e676966"
               alt="Imagem da singular ofertas"
             />
 
             <div className={styles.projectInfo}>
-              <h2>Singular Ofertas 2</h2>
+              <h2>Dt Money</h2>
               <p>
                 E-commerce de produtos em geral. Sistema de autenticação
                 projetado com JWT. Sistema de armazenamento de Cookies com o
@@ -99,12 +98,12 @@ export function About() {
 
           <article className={styles.projectContainer}>
             <img
-              src="https://camo.githubusercontent.com/01b10df792c4551ad549c1c851cd156ef747dc02aafb826c127849c4fb022c91/68747470733a2f2f696d6775722e636f6d2f6363535a6775382e676966"
+              src="https://github.com/recieire/JobsCalc/raw/main/.github/jobscalc.png"
               alt="Imagem da singular ofertas"
             />
 
             <div className={styles.projectInfo}>
-              <h2>Singular Ofertas 3</h2>
+              <h2>JobsCalc</h2>
               <p>
                 E-commerce de produtos em geral. Sistema de autenticação
                 projetado com JWT. Sistema de armazenamento de Cookies com o

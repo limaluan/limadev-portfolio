@@ -17,11 +17,18 @@
     cursor: pointer;
     left: 1rem;
     z-index: 1000;
+    opacity: 0.5;
+    transition: all 500ms;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
   }
 
   //  Arrow Rigth
   .arrowRigth {
-    right: 0;
+    right: 1rem;
     left: auto;
     transform: scaleX(-100%);
   }
@@ -40,7 +47,7 @@
 }
 
 .contentWrapper {
-  width: fit-content;
+  width: 100vw;
   margin: auto;
   overflow-x: hidden;
 }
@@ -104,6 +111,32 @@
 
     .selected {
       filter: brightness(1);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    .projectContainer {
+      flex-direction: column;
+      padding: 5rem;
+
+      & > img {
+        width: 100%;
+      }
+
+      .projectInfo {
+        width: 100%;
+        align-items: center;
+
+        h2 {
+          padding: 2rem 0;
+        }
+
+        p {
+          text-align: center;
+        }
+      }
     }
   }
 }

@@ -1,5 +1,6 @@
 .container {
   background-color: var(--background-white);
+  position: relative;
   overflow-y: hidden;
   height: calc(100vh - 6rem);
   z-index: 0;
@@ -126,7 +127,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .container {
     width: 100vw;
   }
@@ -151,7 +152,7 @@
         rgba(0, 0, 0, 0) 5%,
         rgba(50, 50, 50, 0.5) 95%
       );
-      height: 8vh;
+      height: 8rem;
       position: absolute;
       bottom: 0;
     }
