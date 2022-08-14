@@ -1,7 +1,37 @@
-import styles from "./about.module.scss";
+import styles from "./projects.module.scss";
 // import scrollImg from "../../assets/img/scroll_icon.png";
 
-export function About() {
+interface IProjectsPageProps {
+  id: string;
+}
+
+export function Projects({ id }: IProjectsPageProps) {
+  // Detecta se o usuário está nesta seção
+  const section = document.querySelector("#projects");
+  window.addEventListener("click", () =>
+    console.log(section?.getBoundingClientRect())
+  );
+
+  const headerItems = document.querySelectorAll(".headerItem");
+
+  window.onscroll = (e) => {
+    if (section) {
+      if (
+        section.getBoundingClientRect().bottom - 20 >=
+          section.getBoundingClientRect().height ||
+        section.getBoundingClientRect().top * -1 >=
+          section.getBoundingClientRect().height
+      ) {
+        headerItems[0]?.classList.remove("turn-white");
+        headerItems[1]?.classList.remove("turn-white");
+      } else if (section.getBoundingClientRect().top <= 0) {
+        headerItems[0]?.classList.add("turn-white");
+        headerItems[1]?.classList.add("turn-white");
+      }
+    }
+  };
+
+  // Carrossel
   const controls = document.querySelectorAll("." + styles.arrow);
   const projects = document.querySelectorAll("." + styles.projectContainer);
   const maxProjects = projects.length;
@@ -41,7 +71,7 @@ export function About() {
   });
 
   return (
-    <section className={styles.container}>
+    <section id={id} className={styles.container + " pages"}>
       {/* Arrow Rigth Left*/}
       <svg
         className={styles.arrow}

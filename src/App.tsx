@@ -1,10 +1,12 @@
 import { useLoading } from "./hooks/useLoading";
 
-import { About } from "./components/About";
+import { Projects } from "./components/Projects";
 import Home from "./components/Home";
 import { useEffect } from "react";
 import "./styles/global.scss";
 import { Header } from "./components/Header";
+import { Contact } from "./components/Contact";
+import { captureRejectionSymbol } from "events";
 
 function App() {
   const { isLoaded } = useLoading();
@@ -20,11 +22,11 @@ function App() {
   return (
     <>
       <Header />
-      <Home />
-      <About />
+      <Home id="about" />
+      <Projects id="projects" />
+      <Contact />
     </>
   );
 }
 
 export default App;
-

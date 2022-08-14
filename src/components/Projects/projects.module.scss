@@ -42,14 +42,18 @@
   .title {
     font-size: 4.1rem;
     text-align: center;
-    padding-top: 3.5rem;
+    position: absolute;
+    top: 3.5rem;
+    right: 50%;
+    transform: translateX(50%);
   }
 }
 
 .contentWrapper {
-  width: 100vw;
+  width: 100%;
   margin: auto;
   overflow-x: hidden;
+  height: 100%;
 }
 
 .content {
@@ -57,13 +61,16 @@
   flex-flow: row nowrap;
   align-items: center;
   transition: all 1000ms;
+  height: 100%;
 
   .projectContainer {
+    height: 100%;
     padding: 5rem;
     width: 100%;
     flex-shrink: 0;
     gap: 3%;
     display: flex;
+    align-items: center;
     position: relative;
     padding: 0 10rem;
     transition: all 1s;
@@ -71,6 +78,8 @@
     // Project Image
     & > img {
       width: 50%;
+      height: 50%;
+      object-fit: cover;
       border: var(--background-white) 0.5rem solid;
       border-radius: 4rem;
       background-color: beige;
@@ -116,10 +125,16 @@
 }
 
 @media (max-width: 768px) {
+  .container {
+    
+  }
+
   .content {
+
     .projectContainer {
       flex-direction: column;
       padding: 5rem;
+      height: 100%;
 
       & > img {
         width: 100%;

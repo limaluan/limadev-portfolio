@@ -6,17 +6,13 @@ import { useLoading } from "../../hooks/useLoading";
 import meImg from "../../assets/img/meImg.png";
 import scrollImg from "../../assets/img/scroll_icon.png";
 
-export default function Home() {
+interface IHomeProps {
+  id: string;
+}
+
+export default function Home({ id }: IHomeProps) {
   const { handleCloseLoading, pageLoads, isLoaded } = useLoading();
   const [description, setDescription] = useState("");
-
-  useEffect(() => {
-    fetch(`https://api.github.com/users/limaluan`).then((response) =>
-      response.json().then((data) => {
-        setDescription(data.bio);
-      })
-    );
-  }, []);
 
   window.onload = () => {
     handleCloseLoading();
@@ -24,14 +20,14 @@ export default function Home() {
   };
 
   return (
-    <section id="about" className={styles.container}>
+    <section id={id} className={styles.container}>
       <div className={styles.content}>
         <div className={styles.description}>
           <h1>Desenvolvedor Front-End</h1>
           <p>
-            {description} Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Quos quia corrupti unde sit
-            architecto facilis beatae facere ducimus esse l
+            Oi, me chamo Luan Lima e sou um desenvolvedor front-end! Tenho habilidades
+            com as melhores e mais portateis tecnologias do mercado como ReactJs, NextJs, e NodeJs.
+            
           </p>
           <div className={styles.stacksImg}>
             <img alt="react icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" />
