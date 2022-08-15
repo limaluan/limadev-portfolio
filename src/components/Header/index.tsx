@@ -5,7 +5,7 @@ export function Header() {
   return (
     <header className={styles.container + " pages"}>
       <div className={styles.content}>
-        <img className={styles.logoImg + ' headerItem'} src={logoImg} />
+        <a href="#"><img className={styles.logoImg + ' headerItem'} src={logoImg} /></a>
         <ul className={styles.menu + ' headerItem'}>
           <li>
             <a href="#about">Sobre</a>
