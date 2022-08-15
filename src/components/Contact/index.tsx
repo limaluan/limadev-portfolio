@@ -1,11 +1,13 @@
 import styles from "./contact.module.scss";
 
-export function Contact() {
+interface IContactPageProps {
+  id: string;
+}
+
+export function Contact({ id }: IContactPageProps) {
   return (
-    <section className={styles.container}>
-      <div className={styles.content}>
-        
-      </div>
+    <section id={id} className={styles.container}>
+      <div className={styles.content}></div>
     </section>
   );
 }

@@ -8,13 +8,13 @@ export function Header() {
         <img className={styles.logoImg + ' headerItem'} src={logoImg} />
         <ul className={styles.menu + ' headerItem'}>
           <li>
-            <a href="#">Sobre</a>
+            <a href="#about">Sobre</a>
           </li>
           <li>
-            <a href="#">Projetos</a>
+            <a href="#projects">Projetos</a>
           </li>
           <li>
-            <a href="#">Contato</a>
+            <a href="#contact">Contato</a>
           </li>
         </ul>
       </div>

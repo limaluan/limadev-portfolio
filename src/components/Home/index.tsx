@@ -20,7 +20,7 @@ export default function Home({ id }: IHomeProps) {
   };
 
   return (
-    <section id={id} className={styles.container}>
+    <section id='about' className={styles.container}>
       <div className={styles.content}>
         <div className={styles.description}>
           <h1>Desenvolvedor Front-End</h1>

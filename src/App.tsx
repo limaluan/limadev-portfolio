@@ -6,7 +6,6 @@ import { useEffect } from "react";
 import "./styles/global.scss";
 import { Header } from "./components/Header";
 import { Contact } from "./components/Contact";
-import { captureRejectionSymbol } from "events";
 
 function App() {
   const { isLoaded } = useLoading();
@@ -24,7 +23,7 @@ function App() {
       <Header />
       <Home id="about" />
       <Projects id="projects" />
-      <Contact />
+      <Contact id="contact" />
     </>
   );
 }
