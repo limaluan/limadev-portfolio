@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import styles from "./projects.module.scss";
 // import scrollImg from "../../assets/img/scroll_icon.png";
 
@@ -6,69 +7,67 @@ interface IProjectsPageProps {
 }
 
 export function Projects({ id }: IProjectsPageProps) {
-  // Detecta se o usuário está nesta seção
-  const section = document.querySelector("#projects");
-  window.addEventListener("click", () =>
-    console.log(section?.getBoundingClientRect())
-  );
+  useEffect(() => {
+    // Detecta se o usuário está nesta seção
+    const section = document.querySelector("#projects");
+    const headerItems = document.querySelectorAll(".headerItem");
 
-  const headerItems = document.querySelectorAll(".headerItem");
-
-  window.onscroll = (e) => {
-    if (section) {
-      if (
-        section.getBoundingClientRect().bottom - 20 >=
-          section.getBoundingClientRect().height ||
-        section.getBoundingClientRect().top * -1 >=
-          section.getBoundingClientRect().height
-      ) {
-        headerItems[0]?.classList.remove("turn-white");
-        headerItems[1]?.classList.remove("turn-white");
-      } else if (section.getBoundingClientRect().top <= 0) {
-        headerItems[0]?.classList.add("turn-white");
-        headerItems[1]?.classList.add("turn-white");
+    window.onscroll = (e) => {
+      if (section) {
+        if (
+          section.getBoundingClientRect().bottom - 20 >=
+            section.getBoundingClientRect().height ||
+          section.getBoundingClientRect().top * -1 >=
+            section.getBoundingClientRect().height
+        ) {
+          headerItems[0]?.classList.remove("turn-white");
+          headerItems[1]?.classList.remove("turn-white");
+        } else if (section.getBoundingClientRect().top <= 0) {
+          headerItems[0]?.classList.add("turn-white");
+          headerItems[1]?.classList.add("turn-white");
+        }
       }
-    }
-  };
+    };
 
-  // Carrossel
-  const controls = document.querySelectorAll("." + styles.arrow);
-  const projects = document.querySelectorAll("." + styles.projectContainer);
-  const maxProjects = projects.length;
-  const dots = document.querySelectorAll(".dot");
+    // Carrossel
+    const controls = document.querySelectorAll("." + styles.arrow);
+    const projects = document.querySelectorAll("." + styles.projectContainer);
+    const maxProjects = projects.length;
+    const dots = document.querySelectorAll(".dot");
 
-  let currentProject = 0;
+    let currentProject = 0;
 
-  controls.forEach((control) => {
-    control.addEventListener("click", () => {
-      const isRigth = control.classList.contains(styles.arrowRigth);
+    controls.forEach((control) => {
+      control.addEventListener("click", () => {
+        const isRigth = control.classList.contains(styles.arrowRigth);
 
-      if (isRigth) {
-        currentProject += 1;
-      } else {
-        currentProject -= 1;
-      }
+        if (isRigth) {
+          currentProject += 1;
+        } else {
+          currentProject -= 1;
+        }
 
-      if (currentProject >= maxProjects) {
-        currentProject = 0;
-      }
+        if (currentProject >= maxProjects) {
+          currentProject = 0;
+        }
 
-      if (currentProject < 0) {
-        currentProject = maxProjects - 1;
-      }
+        if (currentProject < 0) {
+          currentProject = maxProjects - 1;
+        }
 
-      projects.forEach((project) => {
-        project.classList.remove("current-item");
-        dots.forEach((dot) => dot.classList.remove(styles.selected));
-        dots[currentProject].classList.add(styles.selected);
+        projects.forEach((project) => {
+          project.classList.remove("current-item");
+          dots.forEach((dot) => dot.classList.remove(styles.selected));
+          dots[currentProject].classList.add(styles.selected);
 
-        projects[currentProject].scrollIntoView({
-          inline: "center",
-          behavior: "smooth",
+          projects[currentProject].scrollIntoView({
+            inline: "center",
+            behavior: "smooth",
+          });
         });
       });
     });
-  });
+  }, []);
 
   return (
     <section id={id} className={styles.container + " pages"}>

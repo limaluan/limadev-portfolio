@@ -11,13 +11,13 @@ interface IHomeProps {
 }
 
 export default function Home({ id }: IHomeProps) {
-  const { handleCloseLoading, pageLoads, isLoaded } = useLoading();
+  // const { handleCloseLoading, pageLoads, isLoaded } = useLoading();
   const [description, setDescription] = useState("");
 
-  window.onload = () => {
-    handleCloseLoading();
-    setTimeout(() => pageLoads(), 3000);
-  };
+  // window.onload = () => {
+  //   handleCloseLoading();
+  //   setTimeout(() => pageLoads(), 3000);
+  // };
 
   return (
     <section id='about' className={styles.container}>

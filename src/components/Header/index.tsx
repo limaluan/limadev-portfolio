@@ -5,10 +5,16 @@ export function Header() {
   return (
     <header className={styles.container + " pages"}>
       <div className={styles.content}>
-        <a href="#"><img className={styles.logoImg + ' headerItem'} src={logoImg} /></a>
-        <ul className={styles.menu + ' headerItem'}>
+        <a href="#">
+          <img
+            alt="Logo do site"
+            className={styles.logoImg + " headerItem"}
+            src={logoImg}
+          />
+        </a>
+        <ul className={styles.menu + " headerItem"}>
           <li>
-            <a href="#about">Sobre</a>
+            <a href="#">Sobre</a>
           </li>
           <li>
             <a href="#projects">Projetos</a>
