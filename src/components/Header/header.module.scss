@@ -9,6 +9,15 @@
     rgba(50, 50, 50, 0.25) 5%,
     rgba(0, 0, 0, 0) 95%
   );
+
+  animation-name: intro-top-to-bottom;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+}
+
+@keyframes intro-top-to-bottom {
+  0% {transform: translateY(-100%);}
+  100% {transform: translateY(0%);}
 }
 
 .content {

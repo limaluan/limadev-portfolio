@@ -8,11 +8,28 @@ interface IProjectsPageProps {
 
 export function Projects({ id }: IProjectsPageProps) {
   useEffect(() => {
-    // Detecta se o usuário está nesta seção
     const section = document.querySelector("#projects");
+    const sectionElements = document.querySelectorAll(".reveal-on-scroll");
     const headerItems = document.querySelectorAll(".headerItem");
 
     window.onscroll = (e) => {
+      // Renderiza os elementos da seção ao entrarem em tela após 500ms
+      setTimeout(() => {
+        sectionElements.forEach((element) => {
+          if (
+            element.getBoundingClientRect().bottom - 20 >=
+              element.getBoundingClientRect().height ||
+            element.getBoundingClientRect().top * -1 >=
+              element.getBoundingClientRect().height
+          ) {
+            console.log(element);
+            console.log(element.getBoundingClientRect());
+            element.classList.remove("off");
+          }
+        });
+      }, 500);
+      
+      // Detecta se o usuário está nesta seção
       if (section) {
         if (
           section.getBoundingClientRect().bottom - 20 >=
@@ -87,10 +104,10 @@ export function Projects({ id }: IProjectsPageProps) {
       >
         <path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
       </svg>
-      <h1 className={styles.title}>Projetos</h1>
+      <h1 className={styles.title + " reveal-on-scroll off"}>Projetos</h1>
 
       <div className={styles.contentWrapper}>
-        <div className={styles.content}>
+        <div className={styles.content + " reveal-on-scroll off"}>
           <article className={styles.projectContainer + " current-item "}>
             <img
               src="https://camo.githubusercontent.com/01b10df792c4551ad549c1c851cd156ef747dc02aafb826c127849c4fb022c91/68747470733a2f2f696d6775722e636f6d2f6363535a6775382e676966"
@@ -141,7 +158,7 @@ export function Projects({ id }: IProjectsPageProps) {
               </p>
             </div>
           </article>
-          <div className={styles.dotContainer}>
+          <div className={styles.dotContainer + " reveal-on-scroll"}>
             <div className={styles.selected + " dot"}></div>
             <div className="dot"></div>
             <div className="dot"></div>

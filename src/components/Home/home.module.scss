@@ -79,6 +79,10 @@
       animation-fill-mode: forwards;
       animation-duration: 1000ms;
       animation-timing-function: ease;
+
+      &:hover {
+        opacity: 0.8 !important;
+      }
     }
 
     img:nth-child(1) {

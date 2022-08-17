@@ -51,6 +51,14 @@ h2 {
   transition: all 500ms;
 }
 
+.reveal-on-scroll {
+  transition: 2s;
+}
+
+.reveal-on-scroll.off {
+  opacity: 0;
+}
+
 .scrollImg {
   position: absolute;
   right: 50%;

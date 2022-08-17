@@ -11,7 +11,6 @@ function App() {
   // const { isLoaded } = useLoading();
 
   useEffect(() => {
-    console.log("executou");
     // if (!isLoaded) {
     //   document.body.style.overflow = "hidden";
     // } else {
