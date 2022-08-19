@@ -28,7 +28,7 @@ export function Projects({ id }: IProjectsPageProps) {
           }
         });
       }, 700);
-      
+
       // Detecta se o usuário está nesta seção
       if (section) {
         if (
@@ -117,10 +117,14 @@ export function Projects({ id }: IProjectsPageProps) {
             <div className={styles.projectInfo}>
               <h2>Singular Ofertas</h2>
               <p>
-                E-commerce de produtos em geral. Sistema de autenticação
-                projetado com JWT. Sistema de armazenamento de Cookies com o
-                Nookies. Integração total com Rest API própria utilizando Axios.
-                Typescript utilizado com ReactJs, NextJs e Styled-Components.
+                E-commerce de produtos em geral. <br />
+                <br />
+                Tecnologias Implementadas:
+                <br />
+                - Sistema de autenticação projetado com JWT. <br />
+                - Sistema de armazenamento de Cookies com Nookies. <br />
+                - Integração total com Rest API própria utilizando Axios. <br />
+                - Typescript utilizado com ReactJs, NextJs e Styled-Components.
               </p>
             </div>
           </article>
@@ -128,16 +132,19 @@ export function Projects({ id }: IProjectsPageProps) {
           <article className={styles.projectContainer}>
             <img
               src="https://camo.githubusercontent.com/146045a9a003e9cfd71a9109df7111019a19d991dc6b39fc2ab235aa43356e7c/68747470733a2f2f692e696d6775722e636f6d2f6776736846576c2e676966"
-              alt="Imagem da singular ofertas"
+              alt="Imagem DtMoney"
             />
 
             <div className={styles.projectInfo}>
               <h2>Dt Money</h2>
               <p>
-                E-commerce de produtos em geral. Sistema de autenticação
-                projetado com JWT. Sistema de armazenamento de Cookies com o
-                Nookies. Integração total com Rest API própria utilizando Axios.
-                Typescript utilizado com ReactJs, NextJs e Styled-Components.
+                Aplicação web feita para gerenciar gastos pessoais. <br />
+                <br />
+                Tecnologias Implementadas: <br />
+                - Projetado utilizando conceitos de FakeAPI com o MirageJS. <br />
+                - Consumação da FakeAPI utilizando Axios. <br />
+                - Gerenciamento de estado e dados com ReactJs. <br />
+                - Typescript utilizado com ReactJs, MirageJs e Axios.
               </p>
             </div>
           </article>
@@ -151,10 +158,13 @@ export function Projects({ id }: IProjectsPageProps) {
             <div className={styles.projectInfo}>
               <h2>JobsCalc</h2>
               <p>
-                E-commerce de produtos em geral. Sistema de autenticação
-                projetado com JWT. Sistema de armazenamento de Cookies com o
-                Nookies. Integração total com Rest API própria utilizando Axios.
-                Typescript utilizado com ReactJs, NextJs e Styled-Components.
+                Aplicação web de estimativa de cálculo para projetos freelancer. <br/><br />
+
+                Tecnologias Implementadas: <br />
+                - Sistema de rotas feito com o Express. <br />
+                - Sistema de renderização dinâmica da página com EJS. <br />
+                - Integração com banco de dados (SQLite). <br />
+                - Javascript utilizado com NodeJs, Express e EJS.
               </p>
             </div>
           </article>
