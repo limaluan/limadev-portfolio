@@ -25,8 +25,8 @@ export default function Home({ id }: IHomeProps) {
         <div className={styles.description}>
           <h1>Desenvolvedor Front-End</h1>
           <p>
-            Oi, me chamo Luan Lima e sou um desenvolvedor front-end! Tenho habilidades
-            com as melhores e mais portateis tecnologias do mercado como ReactJs, NextJs, e NodeJs.
+            Oi, me chamo Luan, sou apaixonado por tecnologia e em aprender coisas novas! 💪 <br />Possuo habilidades
+            com as melhores e mais portáteis tecnologias do mercado como ReactJs, NextJs, e NodeJs.
             
           </p>
           <div className={styles.stacksImg}>

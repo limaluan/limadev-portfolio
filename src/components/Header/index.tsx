@@ -14,13 +14,13 @@ export function Header() {
         </a>
         <ul className={styles.menu + " headerItem"}>
           <li>
-            <a href="#">Sobre</a>
+            <a href="#">Ínicio</a>
           </li>
           <li>
             <a href="#projects">Projetos</a>
           </li>
           <li>
-            <a href="#contact">Contato</a>
+            <a href="#contact">Sobre</a>
           </li>
         </ul>
       </div>
