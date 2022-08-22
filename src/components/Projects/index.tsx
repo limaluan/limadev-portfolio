@@ -22,8 +22,6 @@ export function Projects({ id }: IProjectsPageProps) {
             element.getBoundingClientRect().top * -1 >=
               element.getBoundingClientRect().height
           ) {
-            console.log(element);
-            console.log(element.getBoundingClientRect());
             element.classList.remove("off");
           }
         });
