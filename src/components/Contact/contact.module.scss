@@ -96,6 +96,10 @@
 
 @media (max-width: 768px) {
   .content {
+    .avatar {
+      display: none;
+    }
+    
     .info {
       text-align: center;
       width: 90%;

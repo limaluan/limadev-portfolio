@@ -24,10 +24,14 @@ export function Contact({ id }: IContactPageProps) {
                 <b>Aracaju, Sergipe</b>
               </p>
               <p>
-                Oi! Atualmente sou gerente admnistrativo e estou em transição de
-                carreira com dedicação e empenho nos estudos e aprendizado para
-                ser um grande <b>Desenvolvedor Front-End.</b>
-                <br />
+                Sou uma pessoa extremamente apaixonada por programação e busco o
+                tempo todo estar evoluindo e aprendendo algo novo,
+                principalmente conteúdos ligados a construção de bons códigos e
+                novas tecnologias! <br /> <br />
+                Atualmente sou gerente admnistrativo e estou
+                em transição de carreira com dedicação e empenho nos estudos e
+                aprendizado para ser um grande <b>Desenvolvedor Front-End.</b>
+                <br /> <br />
                 Sou um <b>rápido aprendiz</b> e sei lidar muito bem com
                 <b> novas tecnologias e novos desafios</b>.
               </p>
