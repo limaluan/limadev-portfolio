@@ -56,41 +56,6 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
-
-    .buttons {
-      display: flex;
-      justify-content: space-around;
-
-      a {
-        font-size: 1.6rem;
-        padding: 1rem;
-        border: 1px solid var(--background-black);
-        border-radius: 1rem;
-        background: var(--background-white);
-
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-
-        svg,
-        img {
-          height: 2rem;
-        }
-
-        &:hover {
-          cursor: pointer;
-          background: var(--background-black);
-          color: var(--background-white);
-          transition: all 300ms;
-
-          img,
-          svg {
-            filter: invert(96%) sepia(3%) saturate(2102%) hue-rotate(182deg)
-              brightness(96%) contrast(112%);
-          }
-        }
-      }
-    }
   }
 }
 
@@ -105,7 +70,8 @@
       width: 90%;
 
       .description {
-        .buttons {
+        // Botões
+        div {
           flex-flow: column;
         }
       }

@@ -63,6 +63,66 @@ h2 {
   transform: translateX(50%);
 }
 
+.buttons {
+  display: flex;
+  justify-content: space-around;
+
+  a {
+    font-size: 1.6rem;
+    padding: 1rem;
+    border: 1px solid var(--background-black);
+    border-radius: 1rem;
+    background: var(--background-white);
+
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    svg,
+    img {
+      height: 2rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background: var(--background-black);
+      color: var(--background-white);
+      transition: all 300ms;
+
+      img,
+      svg {
+        filter: invert(96%) sepia(3%) saturate(2102%) hue-rotate(182deg)
+          brightness(96%) contrast(112%);
+      }
+    }
+  }
+}
+
+.buttons.black {
+  a {
+    background: var(--background-black);
+    border: 1px solid var(--background-white);
+
+    img,
+    svg {
+      filter: invert(96%) sepia(3%) saturate(2102%) hue-rotate(182deg)
+        brightness(96%) contrast(112%);
+    }
+
+    &:hover {
+      cursor: pointer;
+      background: var(--background-white);
+      color: var(--background-black);
+      transition: all 300ms;
+
+      img,
+      svg {
+        filter: none;
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .scrollImg {
     // transform: translateX(50%);

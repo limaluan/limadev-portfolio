@@ -124,6 +124,15 @@ export function Projects({ id }: IProjectsPageProps) {
                 - Integração total com Rest API própria utilizando Axios. <br />
                 - Typescript utilizado com ReactJs, NextJs e Styled-Components.
               </p>
+              <div className="buttons black">
+                <a
+                  href="https://github.com/limaluan/Singular_Ofertas_e-shop"
+                  target="new_blank"
+                >
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+                  Repositório
+                </a>
+              </div>
             </div>
           </article>
 
@@ -138,12 +147,21 @@ export function Projects({ id }: IProjectsPageProps) {
               <p>
                 Aplicação web feita para gerenciar gastos pessoais. <br />
                 <br />
-                Tecnologias Implementadas: <br />
-                - Projetado utilizando conceitos de FakeAPI com o MirageJS. <br />
+                Tecnologias Implementadas: <br />- Projetado utilizando
+                conceitos de FakeAPI com o MirageJS. <br />
                 - Consumação da FakeAPI utilizando Axios. <br />
-                - Gerenciamento de estado e dados com ReactJs. <br />
-                - Typescript utilizado com ReactJs, MirageJs e Axios.
+                - Gerenciamento de estado e dados com ReactJs. <br />-
+                Typescript utilizado com ReactJs, MirageJs e Axios.
               </p>
+              <div className="buttons black">
+                <a
+                  href="https://github.com/limaluan/dt_money"
+                  target="new_blank"
+                >
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+                  Repositório
+                </a>
+              </div>
             </div>
           </article>
 
@@ -156,19 +174,28 @@ export function Projects({ id }: IProjectsPageProps) {
             <div className={styles.projectInfo}>
               <h2>JobsCalc</h2>
               <p>
-                Aplicação web de estimativa de cálculo para projetos freelancer. <br/><br />
-
+                Aplicação web de estimativa de cálculo para projetos freelancer.{" "}
+                <br />
+                <br />
                 Tecnologias Implementadas: <br />
                 - Sistema de rotas feito com o Express. <br />
                 - Sistema de renderização dinâmica da página com EJS. <br />
-                - Integração com banco de dados (SQLite). <br />
-                - Javascript utilizado com NodeJs, Express e EJS.
+                - Integração com banco de dados (SQLite). <br />- Javascript
+                utilizado com NodeJs, Express e EJS.
               </p>
+              <div className="buttons black">
+                <a
+                  href="https://github.com/limaluan/jobs_calc"
+                  target="new_blank"
+                >
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+                  Repositório
+                </a>
+              </div>
             </div>
           </article>
           <div className={styles.dotContainer + " reveal-on-scroll"}>
             <div className={styles.selected + " dot"}></div>
-            <div className="dot"></div>
             <div className="dot"></div>
             <div className="dot"></div>
           </div>
