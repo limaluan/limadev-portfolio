@@ -1,8 +1,5 @@
 import styles from "./home.module.scss";
 
-import { useEffect, useState } from "react";
-import { useLoading } from "../../hooks/useLoading";
-
 import meImg from "../../assets/img/meImg.png";
 import scrollImg from "../../assets/img/scroll_icon.png";
 
@@ -11,14 +8,6 @@ interface IHomeProps {
 }
 
 export default function Home({ id }: IHomeProps) {
-  // const { handleCloseLoading, pageLoads, isLoaded } = useLoading();
-  const [description, setDescription] = useState("");
-
-  // window.onload = () => {
-  //   handleCloseLoading();
-  //   setTimeout(() => pageLoads(), 3000);
-  // };
-
   return (
     <section id='about' className={styles.container}>
       <div className={styles.content}>

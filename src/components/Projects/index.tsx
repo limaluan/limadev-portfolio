@@ -25,7 +25,7 @@ export function Projects({ id }: IProjectsPageProps) {
             element.classList.remove("off");
           }
         });
-      }, 700);
+      }, 300);
 
       // Detecta se o usuário está nesta seção
       if (section) {
