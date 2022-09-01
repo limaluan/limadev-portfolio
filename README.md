@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="Singular Ofertas" title="Singular Ofertas" src="https://imgur.com/DYpbXb0.png" width="220px" />
+  <img alt="Singular Ofertas" title="LimaDev Logo" src="https://imgur.com/DYpbXb0.png" width="220px" />
 </h1>
 
 <p align="center">
@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img alt="Singular Ofertas" src="https://imgur.com/PEjO2CE.gif" width="100%">
+  <img alt="LimaDev portifólio" src="https://github.com/limaluan/limadev-portfolio/blob/master/src/assets/img/demo.gif" width="100%">
 </p>
 
 ## 🌐 Você pode acessar o portifólio ➡️ [clicando aqui.](https://limadev.netlify.app/)
