@@ -1,12 +1,12 @@
 import { useEffect } from "react";
+import Project from "./Project";
 import styles from "./projects.module.scss";
-// import scrollImg from "../../assets/img/scroll_icon.png";
 
 interface IProjectsPageProps {
   id: string;
 }
 
-export function Projects({ id }: IProjectsPageProps) {
+export default function ProjectsSection({ id }: IProjectsPageProps) {
   useEffect(() => {
     const section = document.querySelector("#projects");
     const sectionElements = document.querySelectorAll(".reveal-on-scroll");
@@ -106,106 +106,66 @@ export function Projects({ id }: IProjectsPageProps) {
 
       <div className={styles.contentWrapper}>
         <div className={styles.content + " reveal-on-scroll off"}>
-          <article className={styles.projectContainer + " current-item "}>
-            <img
-              src="https://camo.githubusercontent.com/01b10df792c4551ad549c1c851cd156ef747dc02aafb826c127849c4fb022c91/68747470733a2f2f696d6775722e636f6d2f6363535a6775382e676966"
-              alt="Imagem da singular ofertas"
-            />
+          <Project
+            title="Singular Ofertas"
+            href="https://github.com/limaluan/Singular_Ofertas_e-shop"
+            src="https://camo.githubusercontent.com/01b10df792c4551ad549c1c851cd156ef747dc02aafb826c127849c4fb022c91/68747470733a2f2f696d6775722e636f6d2f6363535a6775382e676966"
+          >
+            E-commerce de produtos em geral. <br />
+            <br />
+            Tecnologias Implementadas:
+            <br />
+            - Sistema de autenticação projetado com JWT. <br />
+            - Sistema de armazenamento de Cookies com Nookies. <br />
+            - Integração total com Rest API própria utilizando Axios. <br />-
+            Typescript utilizado com ReactJs, NextJs e Styled-Components.
+          </Project>
 
-            <div className={styles.projectInfo}>
-              <h2>Singular Ofertas</h2>
-              <p>
-                E-commerce de produtos em geral. <br />
-                <br />
-                Tecnologias Implementadas:
-                <br />
-                - Sistema de autenticação projetado com JWT. <br />
-                - Sistema de armazenamento de Cookies com Nookies. <br />
-                - Integração total com Rest API própria utilizando Axios. <br />
-                - Typescript utilizado com ReactJs, NextJs e Styled-Components.
-              </p>
-              <div className="buttons black">
-                <a
-                  href="https://github.com/limaluan/Singular_Ofertas_e-shop"
-                  target="new_blank"
-                >
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
-                  Repositório
-                </a>
-              </div>
-            </div>
-          </article>
+          <Project
+            title="Dt Money"
+            href="https://github.com/limaluan/dt_money"
+            src="https://camo.githubusercontent.com/146045a9a003e9cfd71a9109df7111019a19d991dc6b39fc2ab235aa43356e7c/68747470733a2f2f692e696d6775722e636f6d2f6776736846576c2e676966"
+          >
+            Aplicação web feita para gerenciar gastos pessoais. <br />
+            <br />
+            Tecnologias Implementadas: <br />- Projetado utilizando conceitos de
+            FakeAPI com o MirageJS. <br />
+            - Consumação da FakeAPI utilizando Axios. <br />
+            - Gerenciamento de estado e dados com ReactJs. <br />- Typescript
+            utilizado com ReactJs, MirageJs e Axios.
+          </Project>
 
-          <article className={styles.projectContainer}>
-            <img
-              src="https://camo.githubusercontent.com/146045a9a003e9cfd71a9109df7111019a19d991dc6b39fc2ab235aa43356e7c/68747470733a2f2f692e696d6775722e636f6d2f6776736846576c2e676966"
-              alt="Imagem DtMoney"
-            />
+          <Project
+            title="JobsCalc"
+            href="https://github.com/limaluan/jobs_calc"
+            src="https://github.com/recieire/JobsCalc/raw/main/.github/jobscalc.png"
+          >
+            Aplicação web de estimativa de cálculo para projetos freelancer.
+            <br />
+            <br />
+            Tecnologias Implementadas: <br />
+            - Sistema de rotas feito com o Express. <br />
+            - Sistema de renderização dinâmica da página com EJS. <br />
+            - Integração com banco de dados (SQLite). <br />- Javascript
+            utilizado com NodeJs, Express e EJS.
+          </Project>
 
-            <div className={styles.projectInfo}>
-              <h2>Dt Money</h2>
-              <p>
-                Aplicação web feita para gerenciar gastos pessoais. <br />
-                <br />
-                Tecnologias Implementadas: <br />- Projetado utilizando
-                conceitos de FakeAPI com o MirageJS. <br />
-                - Consumação da FakeAPI utilizando Axios. <br />
-                - Gerenciamento de estado e dados com ReactJs. <br />-
-                Typescript utilizado com ReactJs, MirageJs e Axios.
-              </p>
-              <div className="buttons black">
-                <a
-                  href="https://github.com/limaluan/dt_money"
-                  target="new_blank"
-                >
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
-                  Repositório
-                </a>
-              </div>
-            </div>
-          </article>
+          <Project
+            title="Portifólio completo"
+            href="https://github.com/limaluan"
+            src="https://imgur.com/5Vy4Y0e.png"
+          >
+            Clique abaixo para acessar meu GitHub
+          </Project>
 
-          <article className={styles.projectContainer}>
-            <img
-              src="https://github.com/recieire/JobsCalc/raw/main/.github/jobscalc.png"
-              alt="Imagem da singular ofertas"
-            />
-
-            <div className={styles.projectInfo}>
-              <h2>JobsCalc</h2>
-              <p>
-                Aplicação web de estimativa de cálculo para projetos freelancer.{" "}
-                <br />
-                <br />
-                Tecnologias Implementadas: <br />
-                - Sistema de rotas feito com o Express. <br />
-                - Sistema de renderização dinâmica da página com EJS. <br />
-                - Integração com banco de dados (SQLite). <br />- Javascript
-                utilizado com NodeJs, Express e EJS.
-              </p>
-              <div className="buttons black">
-                <a
-                  href="https://github.com/limaluan/jobs_calc"
-                  target="new_blank"
-                >
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
-                  Repositório
-                </a>
-              </div>
-            </div>
-          </article>
           <div className={styles.dotContainer + " reveal-on-scroll"}>
             <div className={styles.selected + " dot"}></div>
+            <div className="dot"></div>
             <div className="dot"></div>
             <div className="dot"></div>
           </div>
         </div>
       </div>
-      {/* <img
-        className="scrollImg"
-        src={scrollImg}
-        alt="Ícone demonstrando scroll"
-      /> */}
     </section>
   );
 }

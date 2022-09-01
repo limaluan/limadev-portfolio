@@ -1,4 +1,4 @@
-import { Projects } from "./components/Projects";
+import ProjectsSection from "./components/Projects";
 import Home from "./components/Home";
 import "./styles/global.scss";
 import { Header } from "./components/Header";
@@ -9,7 +9,7 @@ function App() {
     <>
       <Header />
       <Home id="about" />
-      <Projects id="projects" />
+      <ProjectsSection id="projects" />
       <Contact id="contact" />
     </>
   );
