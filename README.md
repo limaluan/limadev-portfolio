@@ -16,7 +16,7 @@
 
 ## 🚀 Tecnologias
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+Este portifólio foi desenvolvido com as seguintes tecnologias:
 
 - TypeScript
 - ReactJs

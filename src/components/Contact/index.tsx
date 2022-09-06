@@ -37,7 +37,7 @@ export function Contact({ id }: IContactPageProps) {
               </p>
               <div className='buttons'>
                 <a
-                  href="https://docs.google.com/document/d/1afAzTGjkX1W6xfwXoXJ66uZE4oCBEhe05X_5ZOZmflo/edit"
+                  href="https://drive.google.com/file/d/1B2DubFNbOOMaGLEe7-vnHLOuJzFt751v/view?usp=sharing"
                   target="new_blank"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
