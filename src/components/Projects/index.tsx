@@ -122,6 +122,22 @@ export default function ProjectsSection({ id }: IProjectsPageProps) {
           </Project>
 
           <Project
+            title="DashGo"
+            href="https://github.com/limaluan/DashGo"
+            src="https://camo.githubusercontent.com/0424709268f183c030f63d58e524b65f669ecbabbeba800128165341a97ec380/68747470733a2f2f696d6775722e636f6d2f5a6149787975412e676966"
+          >
+            Aplicação web feita para gerenciar listas de usuário através de um
+            dashboard. <br />
+            <br />
+            Tecnologias Implementadas: <br />- <b>React Query</b> para manter
+            dados em cache e aumentar performance.
+            <br />
+            - Projetado utilizando ChakraUi. <br />
+            - Consumação da FakeAPI utilizando Axios. <br />- Typescript
+            utilizado com ReactJs, ReactQuery, MirageJs e Axios.
+          </Project>
+
+          <Project
             title="Dt Money"
             href="https://github.com/limaluan/dt_money"
             src="https://camo.githubusercontent.com/146045a9a003e9cfd71a9109df7111019a19d991dc6b39fc2ab235aa43356e7c/68747470733a2f2f692e696d6775722e636f6d2f6776736846576c2e676966"
@@ -160,6 +176,7 @@ export default function ProjectsSection({ id }: IProjectsPageProps) {
 
           <div className={styles.dotContainer + " reveal-on-scroll"}>
             <div className={styles.selected + " dot"}></div>
+            <div className="dot"></div>
             <div className="dot"></div>
             <div className="dot"></div>
             <div className="dot"></div>
