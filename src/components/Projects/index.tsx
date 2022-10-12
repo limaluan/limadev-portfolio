@@ -107,6 +107,20 @@ export default function ProjectsSection({ id }: IProjectsPageProps) {
       <div className={styles.contentWrapper}>
         <div className={styles.content + " reveal-on-scroll off"}>
           <Project
+            title="TaskGo"
+            href="https://github.com/limaluan/jobs_calc"
+            src="https://camo.githubusercontent.com/b13d81c54a3dc9dc8ef2951100c44d166aa60dbef527b4f5bebef7a10ae71296/68747470733a2f2f696d6775722e636f6d2f725442717738332e676966"
+          >
+            Aplicação web para gerenciamento de equipe e tarefas.
+            <br />
+            <br />
+            Tecnologias Implementadas: <br />
+            - Sistema de dados em cache utilizando o <b>React Query</b> <br />
+            - Sistema de API fake com <b>MirageJs</b><br />
+            - Consumo de API utilizando <b>Axios</b> <br />
+          </Project>
+
+          <Project
             title="Singular Ofertas"
             href="https://github.com/limaluan/Singular_Ofertas_e-shop"
             src="https://camo.githubusercontent.com/01b10df792c4551ad549c1c851cd156ef747dc02aafb826c127849c4fb022c91/68747470733a2f2f696d6775722e636f6d2f6363535a6775382e676966"
@@ -176,6 +190,7 @@ export default function ProjectsSection({ id }: IProjectsPageProps) {
 
           <div className={styles.dotContainer + " reveal-on-scroll"}>
             <div className={styles.selected + " dot"}></div>
+            <div className="dot"></div>
             <div className="dot"></div>
             <div className="dot"></div>
             <div className="dot"></div>
